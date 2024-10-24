@@ -1,0 +1,49 @@
+/* Rotating Cube Styles */
+.cube-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ensure the cube is centered vertically */
+    margin: 0;
+    background-color: transparent; /* Transparent background */
+}
+
+.cube {
+    position: relative;
+    width: 200px; /* Cube width */
+    height: 200px; /* Cube height */
+    transform-style: preserve-3d;
+    margin: auto;
+    animation: rotateCube 10s infinite linear; /* Apply rotation animation */
+}
+
+/* Cube face styles */
+.face {
+    position: absolute;
+    width: 200px; /* Match the width of the cube */
+    height: 200px; /* Match the height of the cube */
+    background-size: cover; /* Ensure the image covers the face */
+    background-position: center; /* Center the image */
+    border: 1px solid #ccc; /* Optional: border for better visibility */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Add background images to each face */
+.front  { background-image: url('../../assets/bypro.jpg'); transform: translateZ(100px); }
+.back   { background-image: url('../../assets/pot.png'); transform: rotateY(180deg) translateZ(100px); }
+.left   { background-image: url('../../assets/expo.jpg'); transform: rotateY(-90deg) translateZ(100px); }
+.right  { background-image: url('../../assets/flo.jpg'); transform: rotateY(90deg) translateZ(100px); }
+.top    { background-image: url('../../assets/supply.jpg'); transform: rotateX(90deg) translateZ(100px); }
+.bottom { background-image: url('../../assets/cold.png'); transform: rotateX(-90deg) translateZ(100px); }
+
+/* Keyframe animation for rotating the cube */
+@keyframes rotateCube {
+    0% {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+    100% {
+        transform: rotateX(360deg) rotateY(360deg);
+    }
+}

@@ -1,0 +1,172 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.byproducts-container {
+    font-family: Arial, sans-serif;
+    width: 100%; /* Full width */
+    height: 100%; /* Ensure it takes full height */
+    display: flex;
+    flex-direction: column; /* Stack sections vertically */
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+}
+
+.navbar-title {
+    font-size: 24px;
+}
+
+.navbar-links {
+    list-style-type: none;
+    display: flex;
+    gap: 15px;
+}
+
+.navbar-links li a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar-links li a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section Styles */
+.hero-section {
+    background-image: url('src/assets/bypro.jpg'); /* Add your image path here */
+    background-size: cover; /* Make the image cover the entire section */
+    background-position: center; /* Center the image */
+    padding: 40px 0; /* Remove horizontal padding */
+    text-align: center;
+    flex: 0 0 auto; /* Don't allow flex growth */
+    position: relative; /* Set position to relative for absolute elements */
+}
+.hero-content {
+    max-width: 1200px; /* Maximum width for content */
+    margin: 0 auto; /* Center the content */
+    padding: 0 20px; /* Add some horizontal padding to the content */
+}
+
+.hero-content h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 16px;
+}
+
+/* Info Section Styles */
+/* Info Section Styles */
+.info-section {
+    margin: 20px 0;
+    text-align: center; /* Center text */
+    padding: 20px; /* Add vertical padding for a more spacious feel */
+    background-color: #ffffff; /* White background for card effect */
+    border: 1px solid #ddd; /* Border to define the card */
+    border-radius: 8px; /* Rounded corners for a softer look */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow for depth */
+    max-width: 800px; /* Limit the max width of the info section */
+    margin: 20px auto; /* Center the info section */
+}
+
+/* Paragraph styles */
+.info-section p {
+    margin: 10px 0; /* Space between paragraphs */
+    line-height: 1.6; /* Improve readability with increased line height */
+    color: #333; /* Dark text for better contrast */
+    font-size: 1.1rem; /* Slightly larger font size for emphasis */
+}
+
+/* Optional heading styles */
+.info-section h2 {
+    font-size: 1.5rem; /* Increase font size for section headings */
+    margin-bottom: 15px; /* Space below the heading */
+    color: #2c3e50; /* Darker color for emphasis */
+    font-weight: bold; /* Bold text for headings */
+}
+
+/* Strong text for product names */
+.info-section strong {
+    color: #e74c3c; /* Highlight product names with a different color */
+    font-weight: bold; /* Make product names bold */
+}
+/* Byproduct Grid Styles */
+.byproduct-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px; /* Add padding to the grid */
+    max-width: 1200px; /* Maximum width for content */
+    margin: 0 auto; /* Center the grid */
+}
+
+.byproduct-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.byproduct-card img {
+    width: 100%;
+  
+    height: 150px; /* Set a uniform height */
+    border-radius: 8px;
+}
+
+.byproduct-card h2 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.byproduct-card p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  
+        /* Additional mobile-specific styles can go here if needed */
+        .navbar {
+            padding: 10px 5px; /* Less padding for smaller screens */
+        }
+    
+        .hero-content {
+            padding: 0 5px; /* Further reduce padding for smaller screens */
+        }
+    
+        .byproduct-grid {
+            grid-template-columns: 1fr; /* Single column layout on very small screens */
+        }
+    
+        .info-section h2 {
+            font-size: 1.2rem; /* Further reduce heading size */
+        }
+    
+        .info-section p {
+            font-size: 0.9rem; /* Reduce paragraph size */
+        }
+    }

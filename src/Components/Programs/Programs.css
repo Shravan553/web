@@ -1,0 +1,80 @@
+/* Container for the programs section */
+
+.programs {
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping of images */
+  justify-content: space-around; /* Aligns images evenly */
+  padding: 20px; 
+  /* Padding around the container */
+}
+
+.program {
+  width: calc(33.33% - 20px); /* Set width for each program to take 1/3rd of the row, accounting for margin */
+  margin: 10px; /* Space between items */
+  text-align: center; /* Center-align captions */
+}
+h2{
+  color: black;
+  font-size: medium;
+}
+/* Programs.css */
+
+/* World map styling */
+.world-map {
+  margin-top: 40px;
+  text-align: center;
+  color: black; /* Center the world map title */
+}
+
+/* Optionally, adjust the map size */
+.ComposableMap {
+  width: 100%; /* Make the map responsive */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.program img {
+  width: 180px; /* Set a fixed width for uniformity */
+  height: 180px; /* Set a fixed height for uniformity */
+  object-fit: cover; /* Maintain aspect ratio and cover the area */
+  border-radius: 20%; /* Make the image slightly round */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for better visibility */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover */
+}
+
+/* Hover effect on image */
+.program:hover img {
+  transform: scale(1.1); /* Zoom the image slightly on hover */
+  box-shadow: 0 8px 16px #03ff25e9; /* Add deeper shadow on hover */
+}
+
+/* Optional: Styling for captions if needed */
+.caption {
+  margin-top: 10px; /* Space between image and caption */
+  font-size: 0.9rem; /* Font size for caption */
+  color: #333; /* Caption color */
+}
+
+/* Image inside the caption */
+.caption img {
+  width: 60px; /* Set width for the caption image */
+  margin-bottom: 10px; /* Space below the caption image */
+}
+
+/* Show caption on hover */
+.program:hover .caption {
+  opacity: 1; /* Make caption visible */
+  padding-top: 0; /* Remove top padding to reveal content */
+}
+
+/* -------- Media Query for Responsive Design -------- */
+
+/* Adjust styles for smaller screens */
+@media (max-width: 650px) {
+  .programs {
+      flex-direction: column; /* Stack programs vertically */
+  }
+  .program {
+      width: 100%; /* Make each program take full width on small screens */
+      margin: 20px; /* Add margin around each program */
+  }
+}

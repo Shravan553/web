@@ -1,0 +1,225 @@
+.recipes-container {
+  font-family: 'Arial', sans-serif;
+  padding: 20px;
+  margin-top: -20px; /* Adjust based on your navbar height */
+  max-width: 100%; /* Ensure container fits within the screen */
+}
+/* Navbar specific styling */
+.navbar {
+  background-image: url('src/assets/main-business.jpg'); /* Add your potato background image here */
+  background-size: cover; /* Cover the entire navbar */
+  background-position: center; /* Center the background image */
+  color: #FFFFFF; /* Set text color to white for contrast */
+  padding: 10px 20px; /* Adjust padding as needed */
+  position: fixed; /* Ensure the navbar stays fixed at the top */
+  width: 100%; /* Full width */
+  top: 0; /* Align to the top */
+  left: 0; /* Align to the left */
+  z-index: 1000; /* Ensure the navbar is above other content */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: add a subtle shadow for depth */
+  transition: transform 0.3s ease-in-out; /* Smooth transition for hide/show */
+}
+/* Class for hiding the navbar */
+.navbar-hidden {
+  transform: translateY(-100%); /* Move the navbar up out of view */
+}
+img, .recipes-banner {
+  max-width: 100%;
+}
+body {
+  overflow-x: hidden; /* Hide horizontal scroll */
+}
+/* Recipe List Section */
+.recipes-list-section {
+  margin-top: 50px;
+  padding: 20px;
+  background-color: #F9F9F9;
+  text-align: center;
+}
+.recipes-list-title {
+  font-size: 2.5rem;
+  color: #212EA0;
+  margin-bottom: 20px;
+}
+.recipes-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.recipe-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out; /* Smooth scaling on hover */
+}
+.recipe-card:hover {
+  transform: scale(1.02); /* Slightly scale up on hover */
+}
+.recipe-image {
+  width: 100%;
+  border-radius: 10px;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 15px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Add transform transition */
+}
+.recipe-card.visible .recipe-image {
+  opacity: 1;
+  transform: translateY(0); /* Reset position for smooth effect */
+}
+.recipe-card:not(.visible) .recipe-image {
+  transform: translateY(10px); /* Start slightly down for smooth entry */
+}
+.recipe-title {
+  font-size: 1.5rem;
+  color: #FF5733;
+}
+.recipe-description {
+  font-size: 1rem;
+  color: #333;
+}
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .recipes-card-grid {
+    grid-template-columns: 1fr; /* Stack cards vertically on small screens */
+  }
+}
+/* Grid setup */
+.recipes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 1240px;
+  margin: 0 auto;
+  height: auto;
+  justify-items: start;
+  position: relative;
+}
+/* Dots animation */
+.recipes-dots {
+  position: absolute;
+  top: 32%;
+  right: 19%;
+}
+/* Banner styling with animation */
+.recipes-banner {
+  grid-column: span 2;
+  width: 70%;
+  max-width: 100%; /* Ensure banner doesn't overflow */
+  opacity: 0; /* Start with opacity 0 for fade-in effect */
+  transform: translateY(20px); /* Start slightly down for slide-up effect */
+  animation: fadeInSlideUp 1.5s ease-in-out forwards; /* Apply animation */
+}
+/* Content container */
+.recipes-content {
+  grid-column: span 1;
+  margin-top: 10%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  opacity: 0; /* Start hidden */
+  transform: translateY(20px); /* Start slightly down */
+  animation: fadeInSlideUp 1s ease-in-out forwards 0.5s; /* Delay animation for content */
+}
+/* Keyframes for banner animation */
+@keyframes fadeInSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* Initial position */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* End at the original position */
+  }
+}
+/* Heading styling */
+.text-potato {
+  font-size: 7rem;
+  color: #212EA0;
+  font-weight: 900;
+  font-family: sans-serif;
+  max-width: 100%; /* Prevent overflow */
+}
+.text-recipes {
+  font-size: 7rem;
+  color: #FF5733;
+  font-weight: 900;
+  font-family: sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  max-width: 100%;
+}
+/* Description styling */
+.recipes-description {
+  font-size: 1.2rem;
+  font-family: 'Archivo', sans-serif;
+  font-weight: 500;
+  color: #333;
+  max-width: 80%;
+}
+/* Button styling */
+.recipes-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 15px;
+  width: 50%;
+  background-color: #212EA0;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Add box-shadow transition */
+}
+.recipes-btn:hover {
+  background-color: #FF5733;
+  transform: scale(1.05); /* Slightly scale up on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+.recipes-btn img {
+  margin-left: 8px;
+}
+/* Follow Us section */
+.recipes-follow {
+  position: relative;
+  bottom: 0;
+  right: -150px;
+  top: 50px;
+  margin-top: 60px; /* Ensure it's below the navbar */
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .recipes-container {
+    margin-top: 50px; /* Adjust for smaller screens */
+  }
+  
+  /* Adjust grid layout for smaller screens */
+  .recipes-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+  }
+
+  .recipes-dots {
+    position: static; /* Reset position for better visibility on small screens */
+    margin: 20px auto; /* Center dots */
+  }
+
+  .recipes-banner {
+    width: 100%; /* Ensure the banner fits within the screen */
+    animation: fadeInSlideUp 1s ease-in-out forwards; /* Adjust animation timing for smaller screens */
+  }
+
+  .recipes-follow {
+    margin-top: 40px; /* Adjust margin for smaller screens */
+  }
+
+  /* Text sizing for smaller screens */
+  .text-potato,
+  .text-recipes {
+    font-size: 4rem; /* Adjust font size for better fit on smaller devices */
+  }
+}

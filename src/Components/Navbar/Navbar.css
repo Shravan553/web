@@ -1,0 +1,139 @@
+/* Navbar Styles */
+nav {
+  width: 100%;
+  color: #fff;
+  padding: 4px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+  background-color: white;
+  transition: background-color 0.5s ease;
+}
+
+nav.sticky {
+  background-color: white;
+  color: black;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo */
+.logo {
+  width: 290px;
+}
+
+/* Navigation Links */
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 5px 20px;
+  font-size: 17px;
+  font-family:Georgia;
+  font-style: Bold;
+}
+
+/* Change font and add hover effect */
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-family: 'Arial', sans-serif; /* Change to your preferred font */
+  transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+nav ul li a:hover {
+  color: #2bba2e; /* Bright green color on hover */
+  text-shadow: 0 0 5px  #2bba2e;; /* Glowing effect */
+}
+
+/* Dropdown Menu */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #ddd;
+  width: 250px;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu.show {
+  display: block; /* Show dropdown menu when active */
+}
+
+.dropdown-menu li {
+  padding: 10px;
+}
+
+.dropdown-menu li a {
+  text-decoration: none;
+  color: black;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #F0F0F0;
+}
+
+.menu-icon {
+  display: none;
+}
+
+@media (max-width: 840px) {
+  .menu-icon {
+    display: block; /* Show hamburger icon on mobile */
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    background-image: url('path/to/menu-icon.png'); /* Add your hamburger icon */
+    background-size: cover;
+  }
+
+  nav ul {
+    position: fixed; /* Fix position to cover entire viewport */
+    top: 0; /* Start from the top */
+    left: 0; /* Ensure it reaches the left side */
+    width: 100%; /* Make it cover full width */
+    height: 100%; /* Make it cover full height */
+    background: #E7E8EE; /* Background color for the mobile menu */
+    padding-top: 50px; /* Add padding for top items */
+    display: none; /* Initially hidden */
+    flex-direction: column; /* Stack items vertically for mobile */
+    transition: 0.5s ease;
+    z-index: 9; /* Ensure it overlays other elements */
+  }
+
+  nav ul.active {
+    display: flex; /* Show menu when the icon is clicked */
+  }
+
+  nav ul li {
+    display: block;
+    margin: 20px 0;
+    text-align: center; /* Center text for better alignment */
+  }
+
+  @media (max-width: 1200px) {
+    .container {
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+}

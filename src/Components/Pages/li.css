@@ -1,0 +1,148 @@
+.priority-pixels-section {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  background-color: rgba(164, 134, 80);/* New background color */
+}
+h2{
+  color: black;
+  padding: 5px;
+}
+h4{
+  color: green;
+}
+.image-section {
+  position: relative;
+  height: 400px;
+  margin-bottom: 2rem;
+  overflow: hidden; /* Ensure images do not overflow the container */
+}
+
+.main-image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 70%;
+  z-index: 2;
+}
+
+.main-image {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem; /* More rounded corners for a softer look */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* More pronounced shadow */
+  transition: transform 0.3s; /* Add transition for hover effect */
+}
+
+.main-image:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.phone-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #fbbf24;
+  border-radius: 50%;
+  padding: 0.5rem;
+  z-index: 3;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+.secondary-images {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  gap: 1rem;
+  z-index: 1;
+}
+
+.secondary-image {
+  width: calc(50% - 0.5rem);
+  height: auto;
+  border-radius: 1rem; /* More rounded corners for secondary images */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Consistent shadow */
+  transition: transform 0.3s; /* Add transition for hover effect */
+}
+
+.secondary-image:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.content-section {
+  margin-top: 2rem;
+}
+
+.title {
+  font-size: 1.875rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.gradient-bar {
+  height: 0.25rem;
+  width: 4rem;
+  background: linear-gradient(90deg, rgba(0, 21, 66, 0.5) 50%, rgba(4, 217, 57, 0.5) 50%);
+  margin-bottom: 1.5rem;
+}
+
+p5 {
+  margin-bottom: 1rem;
+  color: black;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* Button Styles */
+.button-container {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.button {
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.3s, transform 0.3s;
+  color: white; /* Ensures the text is always white */
+}
+
+/* Green button for "About Us" */
+.about-us {
+  background: linear-gradient(90deg, #22ff00, #1b00b3); /* Tailwind's Emerald Green */
+}
+.content-section {
+  padding: 40px 20px;
+  background: #fff;
+}
+.about-us:hover {
+  background-color: #10b981; /* Darker shade of green on hover */
+}
+
+/* Blue button for "Our Team" */
+.our-team {
+  background: linear-gradient(90deg, #22ff00, #1b00b3); /* Tailwind's Blue */
+}
+
+.our-team:hover {
+  background-color: #2563eb; /* Darker shade of blue on hover */
+}
+
+
+@media (min-width: 768px) {
+  .priority-pixels-section {
+    flex-direction: row;
+  }
+
+  .image-section {
+    width: 50%;
+    padding-right: 2rem;
+    height: auto;
+  }
+
+  .content-section {
+    width: 50%;
+    margin-top: 0;
+  }
+}

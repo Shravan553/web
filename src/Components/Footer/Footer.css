@@ -1,0 +1,130 @@
+/* Footer */
+.footer {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 40px 0; /* Only vertical padding */
+    font-family: 'Arial', sans-serif;
+    width: 100%; /* Full width */
+    height: auto; /* Dynamic height */
+    position: relative; /* Relative positioning for child elements */
+    overflow: hidden; /* Prevent any overflow from causing horizontal scroll */
+    margin: 0; /* Ensure no margin around the footer */
+}
+
+/* Footer container */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%; /* Full width */
+    max-width: 1200px; /* Max width to control content's width */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 0 20px; /* Optional: Add some padding if needed */
+    box-sizing: border-box; /* Include padding/border in width/height */
+}
+
+/* Footer column */
+.footer-column {
+    flex: 1;
+    min-width: 250px; /* Minimum width for responsiveness */
+    margin: 0 20px; /* Space between columns */
+    box-sizing: border-box;
+}
+
+.footer-column h3 {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    color: #13f10f;
+}
+
+/* Social box */
+.social-box {
+    position: absolute; /* Absolute positioning for the social box */
+    top: 20px; /* Distance from the top */
+    right: 20px; /* Distance from the right */
+    background-color: #333; /* Background color for the box */
+    padding: 10px; /* Padding around the icons */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+/* Social icons */
+.social-icons {
+    display: flex;
+    justify-content: center; /* Center align the icons */
+    margin-top: 10px; /* Add space above the icons */
+    gap: 15px; /* Space between icons */
+}
+
+.social-icons a {
+    color: #0eec2f; /* Icon color */
+    font-size: 1.5rem; /* Icon size */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.social-icons a:hover {
+    color: #0c036d; /* Change color on hover */
+}
+
+/* Footer text styles */
+.footer-column p,
+.footer-column ul {
+    font-size: 0.9rem; /* Adjusted font size */
+    line-height: 1.8; /* Improved line height for readability */
+}
+
+.footer-column ul {
+    list-style: none; /* Remove default list styles */
+    padding: 0; /* Remove padding */
+}
+
+.footer-column ul li {
+    margin-bottom: 10px; /* Space between list items */
+}
+
+.footer-column ul li a {
+    text-decoration: none; /* Remove underline */
+    color: #ffffff; /* Link color */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.footer-column ul li a:hover {
+    color: #f1c40f; /* Change link color on hover */
+}
+
+/* Footer bottom */
+.footer-bottom {
+    text-align: center; /* Center text */
+    padding-top: 20px; /* Spacing above the footer text */
+    border-top: 1px solid #444; /* Top border for separation */
+    font-size: 0.8rem; /* Font size for footer text */
+    width: 100%; /* Ensure full width */
+}
+
+.footer-bottom p {
+    margin: 0; /* Remove margin */
+}
+
+/* Remove padding/margin from body/html */
+html,
+body {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    width: 100%; /* Ensure full viewport width */
+    height: 100%; /* Set full height for the page */
+    box-sizing: border-box; /* Box-sizing model for consistent sizing */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-column {
+        flex: 100%; /* Full width on small screens */
+        text-align: center; /* Center text on smaller screens */
+        margin-bottom: 20px; /* Add margin between columns */
+    }
+
+    .footer-container {
+        flex-direction: column; /* Stack columns vertically */
+        align-items: center; /* Center columns */
+    }
+}
